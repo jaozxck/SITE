@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formulário de Login Acessível</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -12,7 +12,7 @@
     <section class="login-card" aria-labelledby="login-heading">
       <h2 id="login-heading" class="login-card__title">Entrar na Conta</h2>
       
-      <form action="/login" method="POST" novalidate>
+      <form onsubmit="event.preventDefault(); alert('Formulário enviado com sucesso!');">
         <div class="form-group">
           <label for="user-email" class="form-label">E-mail</label>
           <input 
