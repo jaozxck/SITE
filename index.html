@@ -3,45 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formulário de Login Acessível</title>
+  <title>Componente Acessível para Terceira Idade</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <main>
-    <section class="login-card" aria-labelledby="login-heading">
-      <h2 id="login-heading" class="login-card__title">Entrar na Conta</h2>
-      
-      <form onsubmit="event.preventDefault(); alert('Formulário enviado com sucesso!');">
-        <div class="form-group">
-          <label for="user-email" class="form-label">E-mail</label>
-          <input 
-            type="email" 
-            id="user-email" 
-            name="email" 
-            class="form-input" 
-            required 
-            aria-describedby="email-hint"
-          />
-          <small id="email-hint" class="form-hint">Exemplo: nome@servidor.com</small>
-        </div>
+    <article class="info-card" aria-labelledby="card-title">
+      <header class="info-card__header">
+        <span class="badge">Dica de Saúde</span>
+        <h1 id="card-title" class="info-card__title">Caminhada Diária e Seus Benefícios</h1>
+      </header>
 
-        <div class="form-group">
-          <label for="user-password" class="form-label">Palavra-passe</label>
-          <input 
-            type="password" 
-            id="user-password" 
-            name="password" 
-            class="form-input" 
-            required 
-          />
-        </div>
+      <div class="info-card__body">
+        <p>
+          Caminhar 30 minutos por dia ajuda a melhorar a circulação, fortalecer os ossos e aumentar a disposição física.
+        </p>
+      </div>
 
-        <button type="submit" class="btn-submit">
-          Entrar no Sistema
-        </button>
-      </form>
-    </section>
+      <footer class="info-card__footer">
+        <a href="#saiba-mais" class="btn-action" role="button">
+          Ler Artigo Completo
+        </a>
+      </footer>
+    </article>
   </main>
 
 </body>
