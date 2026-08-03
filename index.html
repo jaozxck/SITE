@@ -1,56 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leitura Fácil - Guia Prático de Acessibilidade Digital</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário de Login Acessível</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <a href="#conteudo-principal" class="link-atalho">Pular para o conteúdo principal</a>
-
-    <div class="barra-aviso" role="region" aria-label="Aviso de utilidade">
-        <div class="container">
-            <p><strong>Dica rápida:</strong> Pressione as teclas <strong>CTRL</strong> e <strong>+</strong> no teclado para aumentar o tamanho deste site.</p>
+  <main>
+    <section class="login-card" aria-labelledby="login-heading">
+      <h2 id="login-heading" class="login-card__title">Entrar na Conta</h2>
+      
+      <form action="/login" method="POST" novalidate>
+        <div class="form-group">
+          <label for="user-email" class="form-label">E-mail</label>
+          <input 
+            type="email" 
+            id="user-email" 
+            name="email" 
+            class="form-input" 
+            required 
+            aria-describedby="email-hint"
+          />
+          <small id="email-hint" class="form-hint">Exemplo: nome@servidor.com</small>
         </div>
-    </div>
 
-    <header role="banner" class="cabecalho-principal">
-        <div class="container container-cabecalho">
-            <div class="logo">
-                <span class="icone-logo" aria-hidden="true">👁️</span>
-                <span class="texto-logo">Leitura Fácil</span>
-            </div>
-
-            <nav aria-label="Navegação principal">
-                <ul class="menu-navegacao">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#problema">O Problema</a></li>
-                    <li><a href="#passo-a-passo">Passo a Passo</a></li>
-                    <li><a href="#atalhos">Atalhos</a></li>
-                    <li><a href="#faq">Dúvidas</a></li>
-                </ul>
-            </nav>
+        <div class="form-group">
+          <label for="user-password" class="form-label">Palavra-passe</label>
+          <input 
+            type="password" 
+            id="user-password" 
+            name="password" 
+            class="form-input" 
+            required 
+          />
         </div>
-    </header>
 
-    <section id="inicio" class="hero-banner">
-        <div class="container">
-            <h1>Como ajustar telas de celular e computador para enxergar melhor</h1>
-            <p class="subtitulo">Um guia simples, direto e gratuito feito para ajudar você a ler com conforto, sem forçar a vista e sem dores de cabeça.</p>
-            <a href="#passo-a-passo" class="botao-acao principal">Ver passo a passo simplificado</a>
-        </div>
+        <button type="submit" class="btn-submit">
+          Entrar no Sistema
+        </button>
+      </form>
     </section>
+  </main>
 
-    <main id="conteudo-principal" role="main">
-        <div class="container">
-
-            <section id="problema" class="secao" aria-labelledby="titulo-problema">
-                <h2 id="titulo-problema">Por que ler em telas digitais se tornou difícil?</h2>
-                <p>Com o passar dos anos, nossos olhos passam por mudanças naturais. A capacidade de focar em objetos próximos diminui e a sensibilidade ao brilho e às cores claras se altera.</p>
-                <p>As telas vêm configuradas de fábrica para pessoas jovens, com letras pequenas e cores fracas. <strong>A culpa não é da sua visão: são os aparelhos que precisam ser ajustados para você!</strong></p>
-            </section>
-
-            <section id="passo-a-passo" class="secao" aria-labelledby="titulo-dicas">
-                <h2 id="titulo-dicas">3 Ajustes simples no seu aparelho</h2>
+</body>
+</html>
