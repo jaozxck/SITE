@@ -1,382 +1,132 @@
 /* ==========================================================================
-   1. CONFIGURAÇÕES BASE E RESET DE ACESSIBILIDADE
+   Configurações Globais e Acessibilidade Base
    ========================================================================== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 html {
-    scroll-behavior: smooth; /* Rolagem suave entre seções */
+  font-size: 100%; /* Define a base do rem como 16px */
+  box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-    background-color: #FFFFFF;
-    color: #111111;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px; /* Base ampliada para idosos */
-    line-height: 1.7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 1.125rem; /* 18px para melhor legibilidade */
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 1rem;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Indicador de foco destacado para navegação via teclado */
+/* Foco visível e destacado para navegação por teclado */
 :focus-visible {
-    outline: 5px solid #000000;
-    outline-offset: 3px;
-    background-color: #FFFF00 !important;
-    color: #000000 !important;
-}
-
-/* Link invisível para saltar conteúdo direto para o foco principal */
-.link-atalho {
-    position: absolute;
-    top: -100px;
-    left: 10px;
-    background: #000000;
-    color: #FFFFFF;
-    padding: 15px 25px;
-    font-weight: bold;
-    z-index: 9999;
-}
-
-.link-atalho:focus {
-    top: 10px;
+  outline: 3px solid #005a9c;
+  outline-offset: 4px;
 }
 
 /* ==========================================================================
-   2. BARRA DE AVISO SUPERIOR
+   Componente: Cartão de Login
    ========================================================================== */
-.barra-aviso {
-    background-color: #FFF200;
-    color: #000000;
-    padding: 12px 0;
-    border-bottom: 2px solid #000000;
-    font-size: 19px;
-    text-align: center;
+
+.login-card {
+  max-width: 28rem; /* ~448px */
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 2px solid #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.login-card__title {
+  font-size: 1.75rem; /* ~28px */
+  color: #0f0f0f; /* Contraste elevado AAA */
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.form-hint {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-top: 0.25rem;
+}
+
+.form-input {
+  min-height: 3rem; /* 48px de altura mínima (WCAG Target Size) */
+  padding: 0.75rem;
+  font-size: 1.125rem;
+  border: 2px solid #4a4a4a;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+
+.form-input:focus-visible {
+  outline: 3px solid #005a9c;
+  outline-offset: 2px;
+}
+
+.btn-submit {
+  width: 100%;
+  min-height: 3.25rem; /* ~52px para facilitar o toque/clique */
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #004d40; /* Razão de contraste > 7:1 */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #00251a;
+}
+
+.btn-submit:focus-visible {
+  outline: 3px solid #005a9c;
+  outline-offset: 4px;
 }
 
 /* ==========================================================================
-   3. CABEÇALHO E NAVEGAÇÃO
+   Preferências do Usuário (Acessibilidade do Sistema)
    ========================================================================== */
-.cabecalho-principal {
-    background-color: #001F3F;
-    color: #FFFFFF;
-    border-bottom: 5px solid #000000;
-    padding: 20px 0;
+
+/* Suporte à redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-.container-cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.icone-logo {
-    font-size: 36px;
-}
-
-.menu-navegacao {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.menu-navegacao a {
-    color: #FFFFFF;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 10px 14px;
-    display: inline-block;
-    min-height: 48px; /* Área de toque segura */
-}
-
-.menu-navegacao a:hover {
-    background-color: #FFFFFF;
-    color: #001F3F;
-    border-radius: 4px;
-}
-
-/* ==========================================================================
-   4. SEÇÃO HERO (BOAS-VINDAS)
-   ========================================================================== */
-.hero-banner {
-    background-color: #E6F0FA;
-    padding: 50px 0;
-    border-bottom: 3px solid #001F3F;
-}
-
-.hero-banner h1 {
-    font-size: 38px;
-    color: #001F3F;
-    line-height: 1.3;
-    margin-bottom: 20px;
-}
-
-.subtitulo {
-    font-size: 24px;
-    margin-bottom: 30px;
-    max-width: 850px;
-}
-
-/* ==========================================================================
-   5. CONTEÚDO PRINCIPAL E SEÇÕES
-   ========================================================================== */
-main {
-    padding: 40px 0;
-}
-
-.secao {
-    margin-bottom: 60px;
-    padding-bottom: 40px;
-    border-bottom: 2px solid #CCCCCC;
-}
-
-h2 {
-    font-size: 32px;
-    color: #000000;
-    margin-bottom: 25px;
-    line-height: 1.3;
-}
-
-h3 {
-    font-size: 24px;
-    color: #000000;
-    margin-bottom: 12px;
-}
-
-p {
-    margin-bottom: 20px;
-}
-
-strong {
-    background-color: #F0F0F0;
-    padding: 2px 6px;
-    border: 1px solid #CCCCCC;
-}
-
-/* ==========================================================================
-   6. CARDS DE INSTRUÇÃO
-   ========================================================================== */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.card {
-    background-color: #F8F9FA;
-    border: 3px solid #111111;
-    border-radius: 8px;
-    padding: 25px;
-    position: relative;
-}
-
-.card-numero {
-    background-color: #001F3F;
-    color: #FFFFFF;
-    font-weight: bold;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    font-size: 24px;
-}
-
-/* ==========================================================================
-   7. TABELAS DE ACESSIBILIDADE
-   ========================================================================== */
-.tabela-container {
-    overflow-x: auto;
-    margin-top: 20px;
-}
-
-.tabela-acessivel {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #FFFFFF;
-    border: 3px solid #111111;
-    text-align: left;
-}
-
-.tabela-acessivel caption {
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: left;
-    font-size: 20px;
-}
-
-.tabela-acessivel th,
-.tabela-acessivel td {
-    padding: 16px 20px;
-    border: 2px solid #111111;
-}
-
-.tabela-acessivel th {
-    background-color: #001F3F;
-    color: #FFFFFF;
-    font-size: 22px;
-}
-
-kbd {
-    background-color: #EEEEEE;
-    border: 2px solid #000000;
-    border-radius: 4px;
-    padding: 4px 8px;
-    font-family: monospace;
-    font-weight: bold;
-}
-
-/* ==========================================================================
-   8. COMPONENTE FAQ (ACORDION SIMPLES)
-   ========================================================================== */
-.caixa-faq {
-    background-color: #F8F9FA;
-    border: 2px solid #111111;
-    border-radius: 6px;
-    padding: 15px 20px;
-    margin-bottom: 15px;
-}
-
-.caixa-faq summary {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px 0;
-}
-
-.caixa-faq summary:hover {
-    text-decoration: underline;
-}
-
-.caixa-faq p {
-    margin-top: 15px;
-    margin-bottom: 0;
-}
-
-/* ==========================================================================
-   9. BOTÕES DE AÇÃO E CAIXAS DE DESTAQUE
-   ========================================================================== */
-.caixa-destaque {
-    background-color: #EBF3E8;
-    border: 3px solid #005500;
-    border-radius: 8px;
-    padding: 30px;
-}
-
-.botao-acao {
-    display: inline-block;
-    min-height: 55px;
-    padding: 16px 30px;
-    background-color: #005500;
-    color: #FFFFFF;
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-    border: 3px solid #000000;
-    border-radius: 6px;
-    margin-top: 10px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.botao-acao.principal {
-    font-size: 24px;
-    padding: 20px 35px;
-}
-
-.botao-acao:hover {
-    background-color: #003300;
-    text-decoration: underline;
-}
-
-/* ==========================================================================
-   10. RODAPÉ COMPLETO
-   ========================================================================== */
-.rodape-principal {
-    background-color: #111111;
-    color: #FFFFFF;
-    padding-top: 50px;
-    border-top: 6px solid #001F3F;
-}
-
-.container-rodape {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 40px;
-    padding-bottom: 40px;
-}
-
-.coluna-rodape h3 {
-    color: #FFFFFF;
-    font-size: 24px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #555555;
-    padding-bottom: 8px;
-}
-
-.coluna-rodape p {
-    font-size: 19px;
-    line-height: 1.6;
-}
-
-.coluna-rodape ul {
-    list-style: none;
-}
-
-.coluna-rodape li {
-    margin-bottom: 12px;
-}
-
-.coluna-rodape a {
-    color: #FFFFFF;
-    text-decoration: underline;
-    font-size: 20px;
-}
-
-.coluna-rodape a:hover {
-    background-color: #FFFFFF;
-    color: #000000;
-}
-
-.selo-acessibilidade {
-    margin-top: 15px;
-    font-weight: bold;
-    background-color: #222222;
-    padding: 8px 12px;
-    border-radius: 4px;
-    display: inline-block;
-}
-
-.rodape-copyright {
-    background-color: #000000;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 1px solid #333333;
-    font-size: 18px;
-}
-
-.rodape-copyright p {
-    margin-bottom: 0;
+/* Ajustes para o modo de Alto Contraste do Sistema Operativo */
+@media (forced-colors: active) {
+  button, 
+  a,
+  input {
+    border: 2px solid CanvasText;
+  }
 }
