@@ -3,145 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segurança Digital para a Terceira Idade</title>
-    <style>
-        /* Estilos Gerais */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px; /* Fonte maior para facilitar a leitura */
-            line-height: 1.6;
-            color: #1a1a1a;
-            background-color: #f4f6f8;
-        }
-
-        /* Cabeçalho */
-        header {
-            background-color: #004080;
-            color: #ffffff;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.3rem;
-        }
-
-        /* Conteúdo Principal */
-        container {
-            display: block;
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        /* Dicas de Segurança */
-        .card {
-            background-color: #ffffff;
-            border-left: 8px solid #004080;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .card h2 {
-            color: #004080;
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            margin-bottom: 15px;
-        }
-
-        .alerta {
-            background-color: #fff3cd;
-            border-left-color: #d9534f;
-            color: #856404;
-        }
-
-        .alerta h2 {
-            color: #d9534f;
-        }
-
-        /* Botão de Ajuda */
-        .btn-ajuda {
-            display: block;
-            width: 100%;
-            max-width: 400px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #28a745;
-            color: #ffffff;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.4rem;
-            font-weight: bold;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-ajuda:hover {
-            background-color: #218838;
-        }
-
-        /* Rodapé */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #e9ecef;
-            color: #555555;
-            font-size: 1rem;
-            margin-top: 40px;
-        }
-    </style>
+    <title>SafeLvl - Segurança de Senhas para Gamers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>Guia de Segurança na Internet</h1>
-        <p>Dicas simples para navegar no celular e no computador com tranquilidade</p>
+    <header class="navbar">
+        <div class="logo">Safe<span>Lvl</span></div>
+        <nav>
+            <a href="#riscos">Ameaças</a>
+            <a href="#dicas">Checklist</a>
+        </nav>
     </header>
 
-    <container>
-        
-        <div class="card alerta">
-            <h2>⚠️ Regra de Ouro: Bancos não pedem senha!</h2>
-            <p>Nenhum banco ou aplicativo liga pedindo sua senha, código por SMS ou para você fazer uma transferência de teste. Se receber uma ligação assim, <strong>desligue imediatamente</strong>.</p>
-        </div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>PROTEJA SEU LVL: CUIDADOS COM SUAS SENHAS</h1>
+                <p>Não perca suas skins, conquistas e progresso de anos. Aprenda a blindar suas contas contra invasões e golpes de phishing.</p>
+                <a href="#dicas" class="btn-primary">Ver Dicas de Seg</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/hero-gamer.webp" alt="Ilustração de um gamer protegido por um escudo cibernético">
+            </div>
+        </section>
 
-        <div class="card">
-            <h2>1. Cuidado com Links e Mensagens</h2>
-            <p>Recebeu uma mensagem no WhatsApp dizendo que ganhou um prêmio, uma promoção imperdível ou uma cobrança urgente? Não clique no link. Na dúvida, pergunte antes a um familiar de sua confiança.</p>
-        </div>
+        <section id="riscos" class="cards-section">
+            <h2>Principais Ameaças ao Seu Inventário</h2>
+            <div class="grid-cards">
+                <article class="card">
+                    <img src="assets/images/phish-alert.svg" alt="Ícone de alerta de phishing">
+                    <h3>Phishing de Skins</h3>
+                    <p>Links falsos que prometem itens grátis para roubar seus dados de login instantaneamente.</p>
+                </article>
 
-        <div class="card">
-            <h2>2. Crie Senhas Fortes e Anote em Local Seguro</h2>
-            <p>Evite usar datas de nascimento ou nomes de parentes como senha. Misture letras e números. Se precisar anotar, guarde em um caderno em casa, longe do celular.</p>
-        </div>
+                <article class="card">
+                    <img src="assets/images/2fa-shield.svg" alt="Ícone de escudo de segurança">
+                    <h3>Reutilização de Senhas</h3>
+                    <p>Usar a mesma senha do fórum de mods na sua conta principal facilita o acesso de invasores.</p>
+                </article>
 
-        <div class="card">
-            <h2>3. Não Instale Aplicativos Desconhecidos</h2>
-            <p>Baixe aplicativos apenas pelas lojas oficiais do seu celular (Play Store no Android ou App Store no iPhone). Nunca baixe nada que venha por links no WhatsApp.</p>
-        </div>
+                <article class="card">
+                    <img src="assets/images/phish-alert.svg" alt="Ícone de credencial fraca">
+                    <h3>Senhas Previsíveis</h3>
+                    <p>Combinações curtas ou com nomes de jogos conhecidos são descobertas em poucos segundos.</p>
+                </article>
+            </div>
+        </section>
 
-        <a href="#" class="btn-ajuda">Precisa de Ajuda? Fale Conosco</a>
-
-    </container>
+        <section id="dicas" class="checklist-section">
+            <h2>Checklist do Gamer Seguro</h2>
+            <ul class="checklist">
+                <li>
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <strong>Ative o 2FA (Autenticação em Duas Etapas)</strong>
+                        <p>Use aplicativos como Steam Guard, Authenticator ou tokens no celular.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <strong>Crie Passphrases Longas</strong>
+                        <p>Combine 4 palavras aleatórias com símbolos e números (ex: <i>Vapor#Gato$Ninja26</i>).</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <strong>Utilize um Gerenciador de Senhas</strong>
+                        <p>Guarde senhas complexas e distintas para cada launcher de forma criptografada.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <p>Desenvolvido para proteger quem a gente ama na internet.</p>
+        <p>&copy; 2026 SafeLvl. Projeto educativo sobre segurança cibernética em games.</p>
     </footer>
 
 </body>
