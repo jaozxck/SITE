@@ -3,112 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta Sênior - Guia Prático Digital</title>
+    <title>Conecta Sênior - Guia Digital Fácil</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="top-bar">
-        <div class="logo">
-            <h1>Conecta Sênior</h1>
-            <p>Seu portal simples para o mundo digital</p>
-        </div>
-        <div class="accessibility-controls">
-            <span class="acc-label">Tamanho do Texto:</span>
-            <button onclick="changeFontSize(1)" aria-label="Aumentar fonte" class="btn-acc">A+</button>
-            <button onclick="changeFontSize(-1)" aria-label="Diminuir fonte" class="btn-acc">A-</button>
-            <button onclick="toggleContrast()" aria-label="Alternar alto contraste" class="btn-acc btn-contrast">Alto Contraste</button>
+    <header class="barra-acessibilidade">
+        <div class="container-header">
+            <span class="logo">Conecta Sênior</span>
+            <div class="controles-acessibilidade">
+                <button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+</button>
+                <button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A-</button>
+                <button id="btn-contraste" aria-label="Mudar para alto contraste">Alto Contraste</button>
+            </div>
         </div>
     </header>
 
-    <section class="welcome-banner">
-        <h2>O que você gostaria de aprender hoje?</h2>
-        <p>Clique em uma das opções abaixo para ver o passo a passo com explicações simples e fotos.</p>
-    </section>
+    <main class="container-principal">
+        <section class="boas-vindas">
+            <h1>Aprenda a usar a internet de forma simples e segura</h1>
+            <p>Escolha um dos temas abaixo para ver o passo a passo com fotos e explicações fáceis.</p>
+        </section>
 
-    <main class="main-content">
-        <div class="cards-grid">
-
-            <article class="card">
-                <div class="card-icon">💬</div>
-                <h3>Usar o WhatsApp</h3>
-                <p>Aprenda a enviar mensagens de voz, fazer chamadas de vídeo e mandar fotos para sua família.</p>
-                <a href="#tutorial-whatsapp" class="btn-primary">Ver Passo a Passo</a>
+        <section class="grid-categorias">
+            <article class="card-categoria">
+                <div class="icone">💬</div>
+                <h2>WhatsApp e Mensagens</h2>
+                <p>Aprenda a mandar áudios, fazer chamadas de vídeo e enviar fotos para a família.</p>
+                <a href="#" class="btn-acessar">Ver Guia do WhatsApp</a>
             </article>
 
-            <article class="card">
-                <div class="card-icon">🛡️</div>
-                <h3>Segurança na Internet</h3>
-                <p>Descubra como identificar links falsos, evitar golpes no celular e navegar com tranquilidade.</p>
-                <a href="#tutorial-seguranca" class="btn-primary">Ver Passo a Passo</a>
+            <article class="card-categoria">
+                <div class="icone">🔒</div>
+                <h2>Segurança na Internet</h2>
+                <p>Descubra como identificar mensagens falsas e navegar sem risco de golpes.</p>
+                <a href="#" class="btn-acessar">Ver Dicas de Segurança</a>
             </article>
 
-            <article class="card">
-                <div class="card-icon">🚗</div>
-                <h3>Pedir Transporte</h3>
-                <p>Guia fácil para pedir um carro por aplicativo para ir a consultas, passeios ou mercados.</p>
-                <a href="#tutorial-transporte" class="btn-primary">Ver Passo a Passo</a>
+            <article class="card-categoria">
+                <div class="icone">🚗</div>
+                <h2>Pedir Transporte</h2>
+                <p>Passo a passo simples para chamar carros de aplicativo no celular.</p>
+                <a href="#" class="btn-acessar">Ver Guia de Transporte</a>
             </article>
-
-            <article class="card">
-                <div class="card-icon">🏦</div>
-                <h3>Contas e Banco</h3>
-                <p>Dicas simples para consultar seu saldo e fazer pagamentos de forma totalmente segura.</p>
-                <a href="#tutorial-banco" class="btn-primary">Ver Passo a Passo</a>
-            </article>
-
-        </div>
-
-        <section id="tutorial-whatsapp" class="tutorial-section">
-            <div class="tutorial-header">
-                <span class="badge">Passo a Passo</span>
-                <h2>Como enviar uma mensagem de voz no WhatsApp</h2>
-            </div>
-
-            <ol class="steps-list">
-                <li class="step-item">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h4>Abra a conversa</h4>
-                        <p>Toque no nome da pessoa para quem você quer enviar a mensagem de áudio.</p>
-                    </div>
-                </li>
-                <li class="step-item">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h4>Procure o ícone de microfone</h4>
-                        <p>No canto inferior direito da tela, procure o desenho de um <strong>microfone verde</strong>.</p>
-                    </div>
-                </li>
-                <li class="step-item">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h4>Mantenha pressionado e fale</h4>
-                        <p>Pressione e segure o dedo sobre o microfone. Fale com clareza perto do celular e solte quando terminar.</p>
-                    </div>
-                </li>
-            </ol>
         </section>
     </main>
 
-    <footer class="main-footer">
-        <p><strong>Precisa de mais ajuda?</strong> Fale com um familiar ou ligue para o nosso suporte comunitário.</p>
-        <p class="copyright">Projeto de Acessibilidade Digital &copy; 2026</p>
+    <footer>
+        <p>Precisa de ajuda? Escreva para nós ou peça auxílio a um familiar de confiança.</p>
     </footer>
 
     <script>
-        let currentFontSize = 100;
+        // Scripts de acessibilidade
+        const btnAumentar = document.getElementById('btn-aumentar');
+        const btnDiminuir = document.getElementById('btn-diminuir');
+        const btnContraste = document.getElementById('btn-contraste');
+        let tamanhoFonte = 100;
 
-        function changeFontSize(direction) {
-            currentFontSize += direction * 10;
-            if (currentFontSize < 80) currentFontSize = 80;
-            if (currentFontSize > 150) currentFontSize = 150;
-            document.body.style.fontSize = currentFontSize + '%';
-        }
+        btnAumentar.addEventListener('click', () => {
+            if (tamanhoFonte < 140) {
+                tamanhoFonte += 10;
+                document.documentElement.style.fontSize = tamanhoFonte + '%';
+            }
+        });
 
-        function toggleContrast() {
-            document.body.classList.toggle('high-contrast');
-        }
+        btnDiminuir.addEventListener('click', () => {
+            if (tamanhoFonte > 90) {
+                tamanhoFonte -= 10;
+                document.documentElement.style.fontSize = tamanhoFonte + '%';
+            }
+        });
+
+        btnContraste.addEventListener('click', () => {
+            document.body.classList.toggle('alto-contraste');
+        });
     </script>
 </body>
 </html>
