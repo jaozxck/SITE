@@ -8,6 +8,11 @@
     --cor-destaque: #EBF3FA;
 }
 
+/* Define tamanho base no HTML */
+html {
+    font-size: 100%; /* 16px por padrão */
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--cor-fundo);
@@ -17,7 +22,7 @@ body {
     line-height: 1.6;
 }
 
-/* Estilos de Alto Contraste */
+/* Modo Alto Contraste */
 body.alto-contraste {
     --cor-fundo: #000000;
     --cor-card: #111111;
@@ -46,7 +51,7 @@ body.alto-contraste .controles-acessibilidade button {
 .barra-acessibilidade {
     background-color: var(--cor-card);
     border-bottom: 2px solid var(--cor-borda);
-    padding: 15px 20px;
+    padding: 1rem 1.25rem;
 }
 
 .container-header {
@@ -56,7 +61,7 @@ body.alto-contraste .controles-acessibilidade button {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .logo {
@@ -64,103 +69,3 @@ body.alto-contraste .controles-acessibilidade button {
     font-weight: bold;
     color: var(--cor-texto);
     text-decoration: none;
-}
-
-.controles-acessibilidade button {
-    font-size: 1rem;
-    padding: 10px 15px;
-    margin-left: 5px;
-    cursor: pointer;
-    border: 2px solid var(--cor-texto);
-    background: var(--cor-card);
-    color: var(--cor-texto);
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-/* Conteúdo */
-.container-principal {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-.boas-vindas {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.grid-categorias {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.card-categoria {
-    background-color: var(--cor-card);
-    border: 2px solid var(--cor-borda);
-    border-radius: 12px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.icone {
-    font-size: 3rem;
-}
-
-.btn-acessar, .btn-voltar {
-    display: inline-block;
-    background-color: var(--cor-primaria);
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 15px 20px;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    margin-top: 15px;
-}
-
-.btn-voltar {
-    margin-bottom: 20px;
-}
-
-/* Estrutura dos Passos */
-.lista-passos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.passo-card {
-    background-color: var(--cor-card);
-    border: 2px solid var(--cor-borda);
-    border-radius: 12px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.numero-passo {
-    background-color: var(--cor-primaria);
-    color: #FFFFFF;
-    font-size: 1.8rem;
-    font-weight: bold;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    border-top: 2px solid var(--cor-borda);
-}
