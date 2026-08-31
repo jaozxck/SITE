@@ -3,88 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Senha Segura - Dicas Simples para Navegar com Tranquilidade</title>
+    <title>Conecta Sênior - Guia Prático Digital</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">Sua Senha <span>Segura</span></div>
-        <nav>
-            <a href="#cuidados">Cuidados</a>
-            <a href="#dicas">Passo a Passo</a>
-        </nav>
+    <header class="top-bar">
+        <div class="logo">
+            <h1>Conecta Sênior</h1>
+            <p>Seu portal simples para o mundo digital</p>
+        </div>
+        <div class="accessibility-controls">
+            <span class="acc-label">Tamanho do Texto:</span>
+            <button onclick="changeFontSize(1)" aria-label="Aumentar fonte" class="btn-acc">A+</button>
+            <button onclick="changeFontSize(-1)" aria-label="Diminuir fonte" class="btn-acc">A-</button>
+            <button onclick="toggleContrast()" aria-label="Alternar alto contraste" class="btn-acc btn-contrast">Alto Contraste</button>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Aprenda a proteger seus dados na internet de forma fácil</h1>
-                <p>Confira dicas simples para criar senhas fortes, evitar golpes no celular e usar o banco com total segurança.</p>
-                <a href="#dicas" class="btn-primary">Ver Dicas de Segurança</a>
+    <section class="welcome-banner">
+        <h2>O que você gostaria de aprender hoje?</h2>
+        <p>Clique em uma das opções abaixo para ver o passo a passo com explicações simples e fotos.</p>
+    </section>
+
+    <main class="main-content">
+        <div class="cards-grid">
+
+            <article class="card">
+                <div class="card-icon">💬</div>
+                <h3>Usar o WhatsApp</h3>
+                <p>Aprenda a enviar mensagens de voz, fazer chamadas de vídeo e mandar fotos para sua família.</p>
+                <a href="#tutorial-whatsapp" class="btn-primary">Ver Passo a Passo</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>Segurança na Internet</h3>
+                <p>Descubra como identificar links falsos, evitar golpes no celular e navegar com tranquilidade.</p>
+                <a href="#tutorial-seguranca" class="btn-primary">Ver Passo a Passo</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🚗</div>
+                <h3>Pedir Transporte</h3>
+                <p>Guia fácil para pedir um carro por aplicativo para ir a consultas, passeios ou mercados.</p>
+                <a href="#tutorial-transporte" class="btn-primary">Ver Passo a Passo</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🏦</div>
+                <h3>Contas e Banco</h3>
+                <p>Dicas simples para consultar seu saldo e fazer pagamentos de forma totalmente segura.</p>
+                <a href="#tutorial-banco" class="btn-primary">Ver Passo a Passo</a>
+            </article>
+
+        </div>
+
+        <section id="tutorial-whatsapp" class="tutorial-section">
+            <div class="tutorial-header">
+                <span class="badge">Passo a Passo</span>
+                <h2>Como enviar uma mensagem de voz no WhatsApp</h2>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1581579438747-1dc8d1e2729a?q=80&w=800&auto=format&fit=crop" alt="Idosa sorrindo usando um celular com segurança">
-            </div>
-        </section>
 
-        <section id="cuidados" class="cards-section">
-            <h2>Fique Atento a Estes Perigos</h2>
-            <div class="grid-cards">
-                <article class="card">
-                    <img src="https://api.iconify.design/lucide:shield-alert.svg?color=%231b4d3e" alt="Ícone de alerta">
-                    <h3>Mensagens Falsas</h3>
-                    <p>Desconfie de mensagens dizendo que seu banco bloqueou sua conta. Bancos nunca pedem senha por WhatsApp.</p>
-                </article>
-
-                <article class="card">
-                    <img src="https://api.iconify.design/lucide:key-round.svg?color=%231b4d3e" alt="Ícone de chave">
-                    <h3>Senhas Muito Fáceis</h3>
-                    <p>Evite usar sua data de nascimento ou a palavra '123456'. Pessoas mal-intencionadas podem adivinhar facilmente.</p>
-                </article>
-
-                <article class="card">
-                    <img src="https://api.iconify.design/lucide:notebook.svg?color=%231b4d3e" alt="Ícone de caderno">
-                    <h3>Anotações à Mostra</h3>
-                    <p>Não cole papéis com senhas atrás do celular ou na carteira. Guarde suas anotações em um local seguro em casa.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="dicas" class="checklist-section">
-            <h2>Como Criar Uma Senha Segura</h2>
-            <ul class="checklist">
-                <li>
-                    <span class="check-icon">✓</span>
-                    <div>
-                        <strong>Misture Letras e Números</strong>
-                        <p>Combine palavras simples com números e símbolos. Exemplo: <i>CafeComLeite#2026</i>.</p>
+            <ol class="steps-list">
+                <li class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Abra a conversa</h4>
+                        <p>Toque no nome da pessoa para quem você quer enviar a mensagem de áudio.</p>
                     </div>
                 </li>
-                <li>
-                    <span class="check-icon">✓</span>
-                    <div>
-                        <strong>Use Uma Senha Para Cada Local</strong>
-                        <p>Não use a mesma senha do seu e-mail no aplicativo do banco.</p>
+                <li class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Procure o ícone de microfone</h4>
+                        <p>No canto inferior direito da tela, procure o desenho de um <strong>microfone verde</strong>.</p>
                     </div>
                 </li>
-                <li>
-                    <span class="check-icon">✓</span>
-                    <div>
-                        <strong>Peça Ajuda A Alguém de Confiança</strong>
-                        <p>Em caso de dúvida sobre uma mensagem estranha, consulte um familiar próximo antes de clicar.</p>
+                <li class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Mantenha pressionado e fale</h4>
+                        <p>Pressione e segure o dedo sobre o microfone. Fale com clareza perto do celular e solte quando terminar.</p>
                     </div>
                 </li>
-            </ul>
+            </ol>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Sua Senha Segura. Guia prático de segurança digital para a terceira idade.</p>
+    <footer class="main-footer">
+        <p><strong>Precisa de mais ajuda?</strong> Fale com um familiar ou ligue para o nosso suporte comunitário.</p>
+        <p class="copyright">Projeto de Acessibilidade Digital &copy; 2026</p>
     </footer>
 
+    <script>
+        let currentFontSize = 100;
+
+        function changeFontSize(direction) {
+            currentFontSize += direction * 10;
+            if (currentFontSize < 80) currentFontSize = 80;
+            if (currentFontSize > 150) currentFontSize = 150;
+            document.body.style.fontSize = currentFontSize + '%';
+        }
+
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+    </script>
 </body>
 </html>
