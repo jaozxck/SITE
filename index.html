@@ -10,7 +10,7 @@
 
     <header class="barra-acessibilidade">
         <div class="container-header">
-            <span class="logo">Conecta Sênior</span>
+            <a href="index.html" class="logo">Conecta Sênior</a>
             <div class="controles-acessibilidade">
                 <button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+</button>
                 <button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A-</button>
@@ -30,21 +30,21 @@
                 <div class="icone">💬</div>
                 <h2>WhatsApp e Mensagens</h2>
                 <p>Aprenda a mandar áudios, fazer chamadas de vídeo e enviar fotos para a família.</p>
-                <a href="#" class="btn-acessar">Ver Guia do WhatsApp</a>
+                <a href="tutorial-whatsapp.html" class="btn-acessar">Ver Guia do WhatsApp</a>
             </article>
 
             <article class="card-categoria">
                 <div class="icone">🔒</div>
                 <h2>Segurança na Internet</h2>
                 <p>Descubra como identificar mensagens falsas e navegar sem risco de golpes.</p>
-                <a href="#" class="btn-acessar">Ver Dicas de Segurança</a>
+                <a href="tutorial-seguranca.html" class="btn-acessar">Ver Dicas de Segurança</a>
             </article>
 
             <article class="card-categoria">
                 <div class="icone">🚗</div>
                 <h2>Pedir Transporte</h2>
                 <p>Passo a passo simples para chamar carros de aplicativo no celular.</p>
-                <a href="#" class="btn-acessar">Ver Guia de Transporte</a>
+                <a href="tutorial-transporte.html" class="btn-acessar">Ver Guia de Transporte</a>
             </article>
         </section>
     </main>
@@ -53,30 +53,6 @@
         <p>Precisa de ajuda? Escreva para nós ou peça auxílio a um familiar de confiança.</p>
     </footer>
 
-    <script>
-        // Scripts de acessibilidade
-        const btnAumentar = document.getElementById('btn-aumentar');
-        const btnDiminuir = document.getElementById('btn-diminuir');
-        const btnContraste = document.getElementById('btn-contraste');
-        let tamanhoFonte = 100;
-
-        btnAumentar.addEventListener('click', () => {
-            if (tamanhoFonte < 140) {
-                tamanhoFonte += 10;
-                document.documentElement.style.fontSize = tamanhoFonte + '%';
-            }
-        });
-
-        btnDiminuir.addEventListener('click', () => {
-            if (tamanhoFonte > 90) {
-                tamanhoFonte -= 10;
-                document.documentElement.style.fontSize = tamanhoFonte + '%';
-            }
-        });
-
-        btnContraste.addEventListener('click', () => {
-            document.body.classList.toggle('alto-contraste');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
