@@ -1,20 +1,19 @@
 :root {
-    --cor-fundo: #F4F6F8;
+    --cor-fundo: #F0F4F8;
     --cor-card: #FFFFFF;
     --cor-texto: #111111;
     --cor-primaria: #0056B3;
     --cor-primaria-hover: #003D82;
-    --cor-borda: #CCCCCC;
-    --cor-destaque: #EBF3FA;
+    --cor-borda: #D0D7DE;
+    --cor-sombra: rgba(0, 0, 0, 0.08);
 }
 
-/* Define tamanho base no HTML */
 html {
-    font-size: 100%; /* 16px por padrão */
+    font-size: 100%;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     margin: 0;
@@ -30,7 +29,7 @@ body.alto-contraste {
     --cor-primaria: #FFFF00;
     --cor-primaria-hover: #FFD700;
     --cor-borda: #FFFFFF;
-    --cor-destaque: #222222;
+    --cor-sombra: transparent;
 }
 
 body.alto-contraste .btn-acessar,
@@ -47,11 +46,19 @@ body.alto-contraste .controles-acessibilidade button {
     border-color: #FFFF00;
 }
 
-/* Cabeçalho */
+body.alto-contraste .card-categoria {
+    background-image: none !important;
+}
+
+/* Cabeçalho Fixado */
 .barra-acessibilidade {
     background-color: var(--cor-card);
-    border-bottom: 2px solid var(--cor-borda);
-    padding: 1rem 1.25rem;
+    border-bottom: 3px solid var(--cor-primaria);
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px var(--cor-sombra);
 }
 
 .container-header {
@@ -65,8 +72,8 @@ body.alto-contraste .controles-acessibilidade button {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.6rem;
+    font-weight: 800;
     color: var(--cor-texto);
     text-decoration: none;
 }
@@ -79,14 +86,14 @@ body.alto-contraste .controles-acessibilidade button {
     border: 2px solid var(--cor-texto);
     background: var(--cor-card);
     color: var(--cor-texto);
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
 }
 
-/* Conteúdo */
+/* Conteúdo Principal */
 .container-principal {
     max-width: 1000px;
-    margin: 2rem auto;
+    margin: 2.5rem auto;
     padding: 0 1.25rem;
 }
 
@@ -96,92 +103,123 @@ body.alto-contraste .controles-acessibilidade button {
 }
 
 .boas-vindas h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .boas-vindas p {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
 }
 
+/* Layout em Grid para os Cards */
 .grid-categorias {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
 }
 
 .card-categoria {
     background-color: var(--cor-card);
     border: 2px solid var(--cor-borda);
-    border-radius: 12px;
-    padding: 1.5rem;
+    border-radius: 16px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0 4px 12px var(--cor-sombra);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagens de fundo suave com sobreposição legível */
+.card-whatsapp {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), 
+                      url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80');
+}
+
+.card-seguranca {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), 
+                      url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80');
+}
+
+.card-transporte {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), 
+                      url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80');
 }
 
 .card-categoria h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
 }
 
 .card-categoria p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
 .icone {
-    font-size: 3rem;
+    font-size: 3.2rem;
 }
 
+/* Botões Principais */
 .btn-acessar, .btn-voltar {
     display: inline-block;
     background-color: var(--cor-primaria);
     color: #FFFFFF;
     text-decoration: none;
-    padding: 1rem 1.25rem;
+    padding: 1.1rem 1.4rem;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-top: 1rem;
+    box-shadow: 0 2px 5px var(--cor-sombra);
+}
+
+.btn-acessar:hover, .btn-voltar:hover {
+    background-color: var(--cor-primaria-hover);
 }
 
 .btn-voltar {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Estrutura dos Passos */
+/* Estrutura dos Cards de Passo a Passo */
 .lista-passos {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 .passo-card {
     background-color: var(--cor-card);
     border: 2px solid var(--cor-borda);
-    border-radius: 12px;
-    padding: 1.25rem;
+    border-radius: 16px;
+    padding: 1.5rem;
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.5rem;
+    box-shadow: 0 4px 10px var(--cor-sombra);
 }
 
 .passo-card h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin: 0 0 0.5rem 0;
 }
 
 .passo-card p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin: 0;
 }
 
 .numero-passo {
     background-color: var(--cor-primaria);
     color: #FFFFFF;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
-    width: 3.1rem;
-    height: 3.1rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -191,8 +229,8 @@ body.alto-contraste .controles-acessibilidade button {
 
 footer {
     text-align: center;
-    padding: 1.25rem;
-    margin-top: 3rem;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
     border-top: 2px solid var(--cor-borda);
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
