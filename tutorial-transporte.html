@@ -3,60 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedir Transporte - Conecta Sênior</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tutorial Transporte - Conecta Sênior</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-    <header class="barra-acessibilidade">
-        <div class="container-header">
-            <a href="index.html" class="logo">Conecta Sênior</a>
-            <div class="controles-acessibilidade">
-                <button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+</button>
-                <button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A-</button>
-                <button id="btn-contraste" aria-label="Mudar para alto contraste">Alto Contraste</button>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">👴👵 Conecta Sênior</div>
+            <div class="acessibilidade-botoes">
+                <button id="btn-aumentar">A+</button>
+                <button id="btn-diminuir">A-</button>
+                <button id="btn-contraste">Alto Contraste</button>
             </div>
         </div>
     </header>
 
-    <main class="container-principal">
-        <a href="index.html" class="btn-voltar">← Voltar para o Início</a>
+    <main class="main-container">
+        <a href="./index.html" class="btn-voltar">← Voltar à Página Inicial</a>
 
-        <section class="boas-vindas">
-            <h1>Como pedir um carro por aplicativo</h1>
+        <section class="banner-principal">
+            <h1>Como Pedir um Carro por Aplicativo</h1>
+            <p>Guia fácil para solicitar viagens com conforto e autonomia.</p>
         </section>
 
         <section class="lista-passos">
-            <article class="passo-card">
-                <span class="numero-passo">1</span>
-                <div>
-                    <h2>Abra o aplicativo e digite o destino</h2>
-                    <p>Abra o aplicativo de transporte e toque no campo "Para onde?". Digite o endereço completo para onde deseja ir.</p>
+            <article class="passo-item">
+                <div class="passo-num">1</div>
+                <div class="passo-conteudo">
+                    <h2>Informe para onde você vai</h2>
+                    <p>Abra o aplicativo de transporte e toque no campo onde está escrito "Para onde?". Digite o endereço do destino.</p>
                 </div>
             </article>
 
-            <article class="passo-card">
-                <span class="numero-passo">2</span>
-                <div>
-                    <h2>Confirme o local de partida e o valor</h2>
-                    <p>Veja se o endereço onde você está aparece correto na tela. Confira o valor da viagem e a forma de pagamento selecionada.</p>
+            <article class="passo-item">
+                <div class="passo-num">2</div>
+                <div class="passo-conteudo">
+                    <h2>Confira o endereço de partida e o valor</h2>
+                    <p>Certifique-se de que o aplicativo identificou onde você está. Verifique o valor estimado da viagem na tela.</p>
                 </div>
             </article>
 
-            <article class="passo-card">
-                <span class="numero-passo">3</span>
-                <div>
-                    <h2>Confirme a viagem e aguarde</h2>
-                    <p>Toque no botão verde ou azul para confirmar. O aplicativo mostrará a placa, a cor do carro e o nome do motorista.</p>
+            <article class="passo-item">
+                <div class="passo-num">3</div>
+                <div class="passo-conteudo">
+                    <h2>Confirme e aguarde o veículo</h2>
+                    <p>Toque no botão de confirmação. A tela mostrará a foto do motorista, o modelo do carro e a placa. Basta aguardar no local.</p>
                 </div>
             </article>
         </section>
     </main>
 
-    <footer>
-        <p>Precisa de ajuda? Escreva para nós ou peça auxílio a um familiar de confiança.</p>
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>Conecta Sênior © 2026 — Plataforma Educativa Gratuita</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
