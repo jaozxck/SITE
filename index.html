@@ -10,7 +10,9 @@
 
     <header class="barra-acessibilidade">
         <div class="container-header">
-            <a href="index.html" class="logo">Conecta Sênior</a>
+            <a href="index.html" class="logo">
+                <span>👴👵</span> Conecta Sênior
+            </a>
             <div class="controles-acessibilidade">
                 <button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+</button>
                 <button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A-</button>
@@ -21,36 +23,72 @@
 
     <main class="container-principal">
         <section class="boas-vindas">
-            <h1>Aprenda a usar a internet de forma simples e segura</h1>
-            <p>Escolha um dos temas abaixo para ver o passo a passo com fotos e explicações fáceis.</p>
+            <h1>Sua caminhada digital começa aqui!</h1>
+            <p>Tutoriais bem explicados, fontes grandes e navegação segura para o seu dia a dia.</p>
         </section>
 
         <section class="grid-categorias">
-            <article class="card-categoria card-whatsapp">
+            <article class="card-categoria">
+                <span class="tag-categoria">Comunicação</span>
                 <div class="icone">💬</div>
-                <h2>WhatsApp e Mensagens</h2>
-                <p>Aprenda a mandar áudios, fazer chamadas de vídeo e enviar fotos para a família.</p>
-                <a href="tutorial-whatsapp.html" class="btn-acessar">Ver Guia do WhatsApp</a>
+                <h2>WhatsApp Fácil</h2>
+                <p>Aprenda a mandar mensagens de voz, fotos e fazer chamadas de vídeo para a família.</p>
+                <a href="tutorial-whatsapp.html" class="btn-acessar">Abrir Guia do WhatsApp</a>
             </article>
 
-            <article class="card-categoria card-seguranca">
-                <div class="icone">🔒</div>
-                <h2>Segurança na Internet</h2>
-                <p>Descubra como identificar mensagens falsas e navegar sem risco de golpes.</p>
-                <a href="tutorial-seguranca.html" class="btn-acessar">Ver Dicas de Segurança</a>
+            <article class="card-categoria">
+                <span class="tag-categoria">Proteção</span>
+                <div class="icone">🛡️</div>
+                <h2>Segurança Antigolpe</h2>
+                <p>Dicas práticas para identificar mensagens suspeitas e navegar sem medos.</p>
+                <a href="tutorial-seguranca.html" class="btn-acessar">Abrir Dicas de Segurança</a>
             </article>
 
-            <article class="card-categoria card-transporte">
+            <article class="card-categoria">
+                <span class="tag-categoria">Autonomia</span>
                 <div class="icone">🚗</div>
-                <h2>Pedir Transporte</h2>
-                <p>Passo a passo simples para chamar carros de aplicativo no celular.</p>
-                <a href="tutorial-transporte.html" class="btn-acessar">Ver Guia de Transporte</a>
+                <h2>Carros por Aplicativo</h2>
+                <p>Passo a passo simples para pedir transporte com rapidez e conforto.</p>
+                <a href="tutorial-transporte.html" class="btn-acessar">Abrir Guia de Transporte</a>
             </article>
         </section>
+
+        <!-- Elemento Exclusivo: Card de Dica Rápida -->
+        <aside class="secao-recurso">
+            <div class="icone-recurso">💡</div>
+            <div>
+                <h3>Dica Importante de Hoje:</h3>
+                <p>Nunca clique em links recebidos por mensagem sem antes perguntar para um familiar se aquele site é confiável.</p>
+            </div>
+        </aside>
     </main>
 
-    <footer>
-        <p>Precisa de ajuda? Escreva para nós ou peça auxílio a um familiar de confiança.</p>
+    <!-- Rodapé Completo e Estruturado -->
+    <footer class="rodape-principal">
+        <div class="container-rodape">
+            <div class="coluna-rodape">
+                <h4>Conecta Sênior</h4>
+                <p>Um projeto pensado para promover a autonomia, inclusão e segurança digital de pessoas idosas.</p>
+            </div>
+
+            <div class="coluna-rodape">
+                <h4>Atalhos Rápido</h4>
+                <ul>
+                    <li><a href="tutorial-whatsapp.html">Usar o WhatsApp</a></li>
+                    <li><a href="tutorial-seguranca.html">Evitar Golpes</a></li>
+                    <li><a href="tutorial-transporte.html">Pedir Carro</a></li>
+                </ul>
+            </div>
+
+            <div class="coluna-rodape">
+                <h4>Canais Úteis</h4>
+                <p>Precisa de suporte? Ligue para um familiar de confiança ou busque atendimento no posto de saúde mais próximo.</p>
+            </div>
+        </div>
+
+        <div class="rodape-creditos">
+            <p>Conecta Sênior © 2026 — Feito para ajudar você a navegar com tranquilidade.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
